@@ -16,3 +16,5 @@ export interface Plant {
 }
 
 export type Filter = 'all' | 'needs' | 'watered'
+
+export type PlantInput = Omit<Plant, 'id'>
