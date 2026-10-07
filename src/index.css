@@ -1,0 +1,41 @@
+:root {
+  --forest: #1f6b4a;
+  --forest-dark: #154430;
+  --amber: #e2922b;
+  --amber-dark: #b9721a;
+  --cream: #f7f3e8;
+  --card: #ffffff;
+  --ink: #1e2b22;
+  --slate: #6b7268;
+  --border: #e7dfc9;
+  --forest-tint: rgba(31, 107, 74, 0.12);
+  --amber-tint: rgba(226, 146, 43, 0.15);
+  --radius-card: 18px;
+  --radius-tile: 14px;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 20px rgba(30, 50, 35, 0.06);
+  font-family: 'Poppins', system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+}
+
+.screen {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
