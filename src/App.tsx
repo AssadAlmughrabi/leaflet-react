@@ -1,8 +1,16 @@
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { AddPlantPage } from '@/pages/AddPlantPage/AddPlantPage'
+import { EditPlantPage } from '@/pages/EditPlantPage/EditPlantPage'
+import { HomePage } from '@/pages/HomePage/HomePage'
+
 function App() {
   return (
-    <main className="screen">
-      <h1 className="title">My Plants</h1>
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/add" element={<AddPlantPage />} />
+      <Route path="/edit/:id" element={<EditPlantPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
 
