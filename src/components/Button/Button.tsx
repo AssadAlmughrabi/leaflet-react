@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react'
 import './Button.css'
 
 interface ButtonProps extends ComponentProps<'button'> { // to take button props
-  variant?: 'primary' | 'secondary'
+  variant?: 'primary' | 'secondary' | 'outline'
 }
 
 export function Button({ variant = 'primary', type = 'button', className, ...rest }: ButtonProps) {
