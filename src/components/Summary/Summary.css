@@ -1,0 +1,35 @@
+.summary {
+  padding: 12px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.summary-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--slate);
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.summary-count {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.summary-percent {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--slate);
+  min-width: 4ch;
+  text-align: right;
+}
