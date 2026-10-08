@@ -1,0 +1,52 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stepper-button {
+  width: 2.75rem;
+  padding: 0;
+  border-radius: 0.625rem;
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.stepper-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.stepper-input {
+  width: 4rem;
+  min-height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.625rem;
+  background: var(--card);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.stepper-input::-webkit-inner-spin-button,
+.stepper-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.stepper-input:focus-visible {
+  border-color: var(--forest);
+}
+
+.stepper-input[aria-invalid='true'] {
+  border-color: #b3261e;
+}
+
+.stepper-unit {
+  font-size: 0.875rem;
+  color: var(--slate);
+}

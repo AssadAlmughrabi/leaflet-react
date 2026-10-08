@@ -3,6 +3,7 @@
   --forest-dark: #154430;
   --amber: #e2922b;
   --amber-dark: #b9721a;
+  --amber-text: #8a5410;
   --cream: #f7f3e8;
   --card: #ffffff;
   --ink: #1e2b22;
@@ -10,10 +11,10 @@
   --border: #e7dfc9;
   --forest-tint: rgba(31, 107, 74, 0.12);
   --amber-tint: rgba(226, 146, 43, 0.15);
-  --radius-card: 18px;
-  --radius-tile: 14px;
-  --radius-pill: 999px;
-  --shadow-card: 0 8px 20px rgba(30, 50, 35, 0.06);
+  --radius-card: 1.125rem;
+  --radius-tile: 0.875rem;
+  --radius-pill: 0.9375rem;
+  --shadow-card: 0 0.5rem 1.25rem rgba(30, 50, 35, 0.06);
   font-family: 'Poppins', system-ui, sans-serif;
   color: var(--ink);
   background: var(--cream);
@@ -23,19 +24,38 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   background: var(--cream);
 }
 
 .screen {
-  max-width: 430px;
+  max-width: 26.875rem;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .title {
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 700;
   margin: 0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 2.75rem;
+  color: var(--forest);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
 }
