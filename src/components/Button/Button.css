@@ -75,3 +75,13 @@
 .btn-ghost:active {
   background: var(--cream);
 }
+
+.btn-danger {
+  background: var(--amber-text);
+  color: #fff;
+}
+
+.btn-danger:hover,
+.btn-danger:active {
+  background: #6f430c;
+}
