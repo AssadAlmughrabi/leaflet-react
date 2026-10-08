@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { EmptyState } from '@/components/EmptyState/EmptyState'
 import { Header } from '@/components/Header/Header'
 import { PlantFilter } from '@/components/PlantFilter/PlantFilter'
 import { PlantList } from '@/components/PlantList/PlantList'
@@ -23,16 +24,26 @@ export function HomePage() {
     return true
   })
 
+  const goToAdd = () => navigate('/add')
+
   return (
     <main className="screen home">
-      <Header onAdd={() => navigate('/add')} />
+      <Header onAdd={goToAdd} />
       <Summary watered={watered} total={total} />
       <PlantFilter
         value={filter}
         counts={{ all: total, needs, watered }}
         onChange={setFilter}
       />
-      <PlantList plants={visiblePlants} onToggle={toggleWatered} onMore={() => {}} />
+      {total === 0 ? (
+        <EmptyState onAdd={goToAdd} />
+      ) : visiblePlants.length === 0 ? (
+        <p className="home-filter-empty">
+          {filter === 'needs' ? 'No plants need water.' : 'No plants watered yet.'}
+        </p>
+      ) : (
+        <PlantList plants={visiblePlants} onToggle={toggleWatered} onMore={() => {}} />
+      )}
     </main>
   )
 }
