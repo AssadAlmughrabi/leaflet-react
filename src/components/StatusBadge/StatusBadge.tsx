@@ -9,7 +9,7 @@ interface StatusBadgeProps {
 export function StatusBadge({ watered }: StatusBadgeProps) {
   return (
     <span className={watered ? 'status-badge watered' : 'status-badge needs'}>
-      <img src={watered ? wateredTodayIcon : needsWaterIcon} alt="" width="18" height="18" />
+      <img src={watered ? wateredTodayIcon : needsWaterIcon} alt="" width="16" height="16" />
       {watered ? 'Watered today' : 'Needs water'}
     </span>
   )
