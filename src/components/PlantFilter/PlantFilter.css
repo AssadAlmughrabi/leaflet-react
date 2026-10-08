@@ -1,13 +1,13 @@
 .plant-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .filter-tab {
   flex: 1 1 auto;
-  padding: 0 12px;
-  font-size: 12px;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
   font-weight: 600;
   white-space: nowrap;
 }

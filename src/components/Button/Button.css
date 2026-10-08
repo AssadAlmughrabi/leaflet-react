@@ -4,12 +4,12 @@
   border-radius: var(--radius-pill);
   cursor: pointer;
   display: inline-flex;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
-  gap: 8px;
+  gap: 0.5rem;
   justify-content: center;
-  min-height: 44px;
-  padding: 0 20px;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
 }
 
 .btn-primary {
