@@ -146,3 +146,23 @@
   font-size: 0.75rem;
   color: var(--slate);
 }
+
+.plant-form-delete {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.75rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  background: none;
+  color: var(--amber-text);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.plant-form-delete:hover {
+  text-decoration: underline;
+}

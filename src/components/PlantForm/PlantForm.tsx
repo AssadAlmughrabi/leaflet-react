@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import closeIcon from '@/assets/icons/close.svg'
 import imageIcon from '@/assets/icons/image.svg'
+import trashIcon from '@/assets/icons/trash.svg'
 import { Button } from '@/components/Button/Button'
 import { FrequencyStepper } from '@/components/FrequencyStepper/FrequencyStepper'
 import { PlantImage } from '@/components/PlantImage/PlantImage'
@@ -18,6 +19,7 @@ interface PlantFormProps {
   submitLabel: string
   onSubmit: (values: PlantInput) => void
   onCancel: () => void
+  onDelete?: () => void
 }
 
 export function PlantForm({
@@ -27,6 +29,7 @@ export function PlantForm({
   submitLabel,
   onSubmit,
   onCancel,
+  onDelete,
 }: PlantFormProps) {
   const [nameError, setNameError] = useState('')
   const [frequencyError, setFrequencyError] = useState('')
@@ -154,6 +157,13 @@ export function PlantForm({
             onChange={(event) => update('wateredToday', event.target.checked)}
           />
         </label>
+
+        {onDelete && (
+          <button type="button" className="plant-form-delete" onClick={onDelete}>
+            <img src={trashIcon} alt="" width="20" height="20" />
+            Delete plant
+          </button>
+        )}
       </div>
 
       <div className="plant-form-actions">
