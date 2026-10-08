@@ -12,19 +12,27 @@ const MIN_DAYS = 1
 const MAX_DAYS = 365
 
 interface PlantFormProps {
-  initialValues: PlantInput
+  values: PlantInput
+  onChange: (values: PlantInput) => void
+  onChooseImage: () => void
   submitLabel: string
   onSubmit: (values: PlantInput) => void
   onCancel: () => void
 }
 
-export function PlantForm({ initialValues, submitLabel, onSubmit, onCancel }: PlantFormProps) {
-  const [values, setValues] = useState<PlantInput>(initialValues)
+export function PlantForm({
+  values,
+  onChange,
+  onChooseImage,
+  submitLabel,
+  onSubmit,
+  onCancel,
+}: PlantFormProps) {
   const [nameError, setNameError] = useState('')
   const [frequencyError, setFrequencyError] = useState('')
 
   function update<K extends keyof PlantInput>(key: K, value: PlantInput[K]) {
-    setValues((prev) => ({ ...prev, [key]: value }))
+    onChange({ ...values, [key]: value })
   }
 
   function changeFrequency(days: number) {
@@ -55,7 +63,7 @@ export function PlantForm({ initialValues, submitLabel, onSubmit, onCancel }: Pl
           <div className="plant-form-image">
             <PlantImage imageKey={values.imageKey} className="plant-form-preview" />
             <div className="plant-form-image-actions">
-              <Button variant="secondary" className="plant-form-image-button" onClick={() => {}}>
+              <Button variant="secondary" className="plant-form-image-button" onClick={onChooseImage}>
                 <img src={imageIcon} alt="" width="20" height="20" />
                 {values.imageKey ? 'Change plant image' : 'Choose plant image'}
               </Button>

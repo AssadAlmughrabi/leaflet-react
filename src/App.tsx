@@ -7,8 +7,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/add" element={<AddPlantPage />} />
-      <Route path="/edit/:id" element={<EditPlantPage />} />
+      <Route path="/add/*" element={<AddPlantPage />} />
+      <Route path="/edit/:id/*" element={<EditPlantPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
